@@ -1,9 +1,11 @@
 var app = app || {};
 
-var MessageList = Backbone.Collection.extend({
-	model: app.Message,
+(function(){
+	var MessageList = Backbone.Collection.extend({
+		model: app.Message,
 
-	localStorage: new Store('messages-backbone')
+		localStorage: new Store('messages-backbone')
+	});
+
+	app.messages = new MessageList();
 });
-
-app.Messages = new MessageList();
