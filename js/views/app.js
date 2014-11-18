@@ -20,8 +20,7 @@ var app = app || {};
 			if (!this.$input.val().trim()) {
 				return;
 			}
-			message.create({ body: this.$input.val().trim() });
-			this.$input.val('');
+			message.set({ body: this.$input.val().trim() });
 		},
 
 		addOne: function(message){
