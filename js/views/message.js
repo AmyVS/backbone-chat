@@ -1,6 +1,6 @@
 var app = app || {};
 
-(function(){
+// (function(){
 	app.MessageView = Backbone.View.extend({
 		template: _.template($('#message-template').html() ),
 
@@ -13,4 +13,4 @@ var app = app || {};
 			return this;
 		}
 	});
-});
+// });
