@@ -1,6 +1,6 @@
 var app = app || {};
 
-(function(){
+// (function(){
 	app.Message = Backbone.Model.extend({
 		defaults: function() {
 			return {
@@ -8,4 +8,4 @@ var app = app || {};
 			}
 		}
 	});
-});
+// });
