@@ -9,11 +9,13 @@
 <body class="container">
   <section id="app">
     <h1>Chat App</h1>
-    <script type="text/template" id="message-template">
       <ul id="chat-list">
-        <li><%-body%></li>
       </ul>
-    </script>
+
+      <script type="text/template" id="message-template">
+        <li><%-body%></li>
+      </script>
+
     <input id="new-message" autofocus>
     <button class="btn btn-success" id="submit-message">Send</button>
   </section>
