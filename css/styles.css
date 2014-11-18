@@ -1,0 +1,5 @@
+#chat-box {
+	height: 300px;
+	max-width: 50%;
+	overflow: scroll;
+}
