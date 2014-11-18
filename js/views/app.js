@@ -22,6 +22,7 @@ var app = app || {};
 			} else {
 				app.message.set({ body: this.$textarea.val().trim() });
 				app.messages.add(app.message);
+				$('#new-message').val('');
 			}
 		},
 
