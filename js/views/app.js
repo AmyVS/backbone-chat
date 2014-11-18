@@ -9,7 +9,7 @@ var app = app || {};
 		},
 
 		initialize: function() {
-			this.$input = this.$('#new-message');
+			this.$textarea = this.$('#new-message');
 			this.listenTo(app.messages, "add", this.addOne);
 			this.listenTo(app.messages, "reset", this.addAll);
 			this.listenTo(app.messages, "all", this.render)
@@ -17,10 +17,10 @@ var app = app || {};
 
 		createMessage: function() {
 			app.message = new app.Message();
-			if (!this.$input.val().trim()) {
+			if (!this.$textarea.val().trim()) {
 				return;
 			} else {
-				app.message.set({ body: this.$input.val().trim() });
+				app.message.set({ body: this.$textarea.val().trim() });
 				app.messages.add(app.message);
 			}
 		},
