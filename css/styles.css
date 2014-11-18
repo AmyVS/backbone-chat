@@ -1,5 +1,11 @@
 #chat-box {
 	height: 300px;
-	max-width: 50%;
+	max-width: 60%;
 	overflow: scroll;
+}
+
+@media (max-width: 730px) {
+	#chat-box {
+		max-width: 90%;
+	}
 }
