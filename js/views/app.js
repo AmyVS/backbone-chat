@@ -10,27 +10,30 @@ var app = app || {};
 
 		initialize: function() {
 			this.$input = this.$('#new-message');
-			this.listenTo(app.Messages, "add", this.addOne);
-			this.listenTo(app.Messages, "reset", this.addAll);
-			this.listenTo(app.Messages, "all", this.render)
+			this.listenTo(app.messages, "add", this.addOne);
+			this.listenTo(app.messages, "reset", this.addAll);
+			this.listenTo(app.messages, "all", this.render)
 		},
 
 		createMessage: function() {
-			var message = new app.Message();
+			app.message = new app.Message();
 			if (!this.$input.val().trim()) {
 				return;
+			} else {
+				app.message.set({ body: this.$input.val().trim() });
+				// how do I push this new message to the collection?
+				this.render();
+				console.log(app.message.get('body'));
 			}
-			message.set({ body: this.$input.val().trim() });
 		},
 
 		addOne: function(message){
-			var view = new app.MessageView({model: message});
-			$('#chat-list').append(view.render().el);
+			var messageView = new app.MessageView({model: message});
+			$('#chat-list').append(messageView.render().el);
 		},
 
 		addAll: function(){
 			$('#chat-list').html('');
-			app.Messages.each(this.addOne, this);
+			app.messages.each(this.addOne, this);
 		}
-
 	});
