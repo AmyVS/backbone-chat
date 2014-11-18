@@ -21,9 +21,7 @@ var app = app || {};
 				return;
 			} else {
 				app.message.set({ body: this.$input.val().trim() });
-				// how do I push this new message to the collection?
-				this.render();
-				console.log(app.message.get('body'));
+				app.messages.add(app.message);
 			}
 		},
 
