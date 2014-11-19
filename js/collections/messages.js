@@ -1,6 +1,5 @@
 var app = app || {};
 
-// (function(){
 	var MessageList = Backbone.Collection.extend({
 		model: app.Message,
 
@@ -8,4 +7,3 @@ var app = app || {};
 	});
 
 	app.messages = new MessageList();
-// });
