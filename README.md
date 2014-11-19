@@ -4,7 +4,7 @@ This was an exercise getting to know the basics of Backbone.js. It's a simple ch
 
 ![image](https://drawception.com/pub/panels/2013/1-20/ghWXYOEZGQ-10.png)
 
-Pacman icons made by Icomoon from [icomoon.io](icomoon.io)
+Pacman icons in the app were made by Icomoon, from [icomoon.io](icomoon.io)
 
 ---
 **MIT License Copyright (c) 2014 Amy Vaillancourt-Sals**
