@@ -16,9 +16,25 @@ img {
 	height: 30px;
 }
 
+img#triangle1, img#triangle2 {
+	height: 15px;
+}
+
 img#pacman2 {
 	float: right;
 }
+
+img#triangle1 {
+	margin-top: -45px;
+	margin-left: 18px;
+}
+
+img#triangle2 {
+	float: right;
+	margin-top: -13px;
+	margin-right: 50px;
+}
+
 
 .person1, .person2 {
 	padding: 10px;
