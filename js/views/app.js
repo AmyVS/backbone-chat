@@ -11,6 +11,7 @@ var app = app || {};
 		initialize: function() {
 			this.$textarea = this.$('#new-message');
 			this.listenTo(app.messages, "add", this.addOne);
+			this.listenTo(app.messages, "add", this.checkPerson, this);
 			this.listenTo(app.messages, "reset", this.addAll);
 			this.listenTo(app.messages, "all", this.render)
 		},
@@ -26,6 +27,10 @@ var app = app || {};
 			}
 		},
 
+		checkPerson: function(message) {
+			message.switchPerson(message);
+		},
+
 		addOne: function(message){
 			var messageView = new app.MessageView({model: message});
 			$('#chat-list').append(messageView.render().el);
@@ -33,7 +38,7 @@ var app = app || {};
 			$('#chat-box')[0].scrollTop = 1000000;
 		},
 
-		addAll: function(){
+		addAll: function() {
 			$('#chat-list').html('');
 			app.messages.each(this.addOne, this);
 		}
