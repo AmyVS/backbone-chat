@@ -12,6 +12,14 @@ li {
 	margin: 2% 0;
 }
 
+img {
+	height: 30px;
+}
+
+img#pacman2 {
+	float: right;
+}
+
 .person1, .person2 {
 	padding: 10px;
 	border-radius: 1em;
@@ -19,11 +27,13 @@ li {
 
 .person1 {
 	background: #91BEFF;
+	min-width: 60%;
 	margin-right: 30%;
 }
 
 .person2 {
 	background: #C7FFB8;
+	min-width: 60%;
 	margin-right: 10%;
 	margin-left: 20%;
 }
