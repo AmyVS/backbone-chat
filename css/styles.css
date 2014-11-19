@@ -28,6 +28,12 @@ li {
 	margin-left: 20%;
 }
 
+textarea {
+	border-radius: .5em;
+	background: #efefef;
+	border: 1px solid #bbb;
+}
+
 button {
 	margin-left: 15px;
 	margin-top: -70px;
