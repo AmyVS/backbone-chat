@@ -29,6 +29,7 @@ var app = app || {};
 		addOne: function(message){
 			var messageView = new app.MessageView({model: message});
 			$('#chat-list').append(messageView.render().el);
+			$('#new-message').focus();
 		},
 
 		addAll: function(){
