@@ -30,10 +30,12 @@ var app = app || {};
 			var messageView = new app.MessageView({model: message});
 			$('#chat-list').append(messageView.render().el);
 			$('#new-message').focus();
+			$('#chat-box')[0].scrollTop = 1000000;
 		},
 
 		addAll: function(){
 			$('#chat-list').html('');
 			app.messages.each(this.addOne, this);
 		}
+
 	});
