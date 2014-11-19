@@ -2,6 +2,7 @@ var app = app || {};
 
 // (function(){
 	app.MessageView = Backbone.View.extend({
+		tagName: "li",
 		template: _.template($('#message-template').html() ),
 
 		initialize: function() {
