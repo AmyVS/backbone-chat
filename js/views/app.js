@@ -10,8 +10,8 @@ var app = app || {};
 
 		initialize: function() {
 			this.$textarea = this.$('#new-message');
-			this.listenTo(app.messages, "add", this.addOne);
 			this.listenTo(app.messages, "add", this.checkPerson, this);
+			this.listenTo(app.messages, "add", this.addOne);
 			this.listenTo(app.messages, "reset", this.addAll);
 			this.listenTo(app.messages, "all", this.render)
 		},
