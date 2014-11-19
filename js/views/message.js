@@ -10,8 +10,17 @@ var app = app || {};
 		},
 
 		render: function() {
-			this.$el.html(this.template(this.model.toJSON()));
-			return this;
+			if (this.model.get("person") === "person1") {
+				this.setElement({className: "person1"});
+				console.log(this);
+				this.$el.html(this.template(this.model.toJSON()));
+				// return this;
+			} else {
+				this.setElement({className: "person2"});
+				console.log(this);
+				this.$el.html(this.template(this.model.toJSON()));
+				// return this;
+			}
 		}
 	});
 // });
