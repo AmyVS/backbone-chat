@@ -18,6 +18,7 @@ img {
 
 img#triangle1, img#triangle2 {
 	height: 15px;
+	visibility: hidden;
 }
 
 img#pacman2 {

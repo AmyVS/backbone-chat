@@ -36,6 +36,14 @@ var app = app || {};
 			$('#chat-list').append(messageView.render().el);
 			$('#new-message').focus();
 			$('#chat-box')[0].scrollTop = 1000000;
+
+			if (message.get("person") === "person1") {
+				$('img#triangle1').css({ "visibility":"visible" });
+				$('img#triangle2').css({ "visibility": "hidden" });
+			} else if (message.get("person") === "person2") {
+				$('img#triangle2').css({ "visibility":"visible" });
+				$('img#triangle1').css({ "visibility": "hidden" });
+			}
 		},
 
 		addAll: function() {
