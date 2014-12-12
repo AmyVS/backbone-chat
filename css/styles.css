@@ -13,12 +13,23 @@ h1 {
   font-family: 'Monofett', cursive;
   font-size: 4em;
   color: #EEE;
+  text-align: center;
+  margin: .5em;
 }
 
 #chat-box {
   height: 300px;
   max-width: 60%;
   overflow: scroll;
+  display: block;
+  margin: auto;
+}
+
+.row {
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  padding: 2.5em;
 }
 
 ul	{
@@ -87,4 +98,13 @@ button {
 	#chat-box {
 		max-width: 90%;
 	}
+
+  .row {
+    width: 100px;
+    display: inline;
+  }
+
+  button {
+    margin-right: -15px;
+  }
 }
