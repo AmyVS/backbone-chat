@@ -9,6 +9,12 @@ body {
   background: transparent;
 }
 
+h1 {
+  font-family: 'Monofett', cursive;
+  font-size: 4em;
+  color: #EEE;
+}
+
 #chat-box {
   height: 300px;
   max-width: 60%;
