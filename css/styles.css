@@ -94,6 +94,12 @@ button {
 	margin-top: -70px;
 }
 
+footer {
+  text-align: center;
+  padding-top: 10em;
+  color: #555;
+}
+
 @media (max-width: 730px) {
 	#chat-box {
 		max-width: 90%;
@@ -106,5 +112,9 @@ button {
 
   button {
     margin-right: -15px;
+  }
+
+  footer {
+    padding-top: 8em;
   }
 }
