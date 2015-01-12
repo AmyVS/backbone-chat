@@ -12,7 +12,6 @@ var app = app || {};
 			this.$textarea = this.$('#new-message');
 			this.listenTo(app.messages, "add", this.checkPerson, this);
 			this.listenTo(app.messages, "add", this.addOne);
-			this.listenTo(app.messages, "reset", this.addAll);
 			this.listenTo(app.messages, "all", this.render)
 		},
 
@@ -45,10 +44,5 @@ var app = app || {};
 				$('img#triangle1').css({ "visibility": "hidden" });
 			}
 		},
-
-		addAll: function() {
-			$('#chat-list').html('');
-			app.messages.each(this.addOne, this);
-		}
 
 	});
